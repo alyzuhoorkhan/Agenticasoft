@@ -221,51 +221,6 @@
             </div>
         </div>
     </nav>
-<?php
-$current_uri = $_SERVER['REQUEST_URI'];
-$is_service_page = (strpos($current_uri, '/services/') !== false);
-if ($is_service_page) {
-    // Get service name from slug
-    $slug = basename(parse_url($current_uri, PHP_URL_PATH));
-    // Map slugs to display names
-    $service_names = [
-        'web-development-for-startups' => 'Web Development',
-        'web-design-for-startups' => 'Web Design',
-        'ui-ux-design' => 'UI/UX Design',
-        'ai-chatbot-development' => 'AI Chatbot Development',
-        'ai-integration-services' => 'AI Integration',
-        'workflow-automation' => 'Workflow Automation',
-        'seo-for-startups' => 'SEO Optimization',
-        'digital-marketing-for-startups' => 'Digital Marketing',
-        'cybersecurity-audit' => 'Cybersecurity Audits',
-        'custom-software-development' => 'Custom Software Solutions'
-    ];
-    $display_name = isset($service_names[$slug]) ? $service_names[$slug] : 'Service';
-    
-    // Render breadcrumbs
-    echo '
-    <div class="breadcrumb-wrap">
-        <div class="container">
-            <nav aria-label="Breadcrumb">
-                <ol class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
-                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
-                        <meta itemprop="position" content="1" />
-                    </li>
-                    <li class="breadcrumb-item" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                        <a href="/#services" itemprop="item"><span itemprop="name">Services</span></a>
-                        <meta itemprop="position" content="2" />
-                    </li>
-                    <li class="breadcrumb-item active" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem" aria-current="page">
-                        <span itemprop="name">' . htmlspecialchars($display_name) . '</span>
-                        <meta itemprop="position" content="3" />
-                    </li>
-                </ol>
-            </nav>
-        </div>
-    </div>';
-}
-?>
 
 
 
