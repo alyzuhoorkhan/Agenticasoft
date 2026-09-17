@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "slug": "example-post-slug",
+    "title": "Your Post Title Here",
+    "author": "Ali Zuhoor",
+    "created_at": "2026-09-01",
+    "image": "uploads/your-image.jpg",
+    "excerpt": "Short summary shown on the blog listing page.",
+    "content": "Full post text. Plain text with line breaks works fine.",
+    "content_html": "<p>Optional. Use this instead of <em>content</em> if you want real HTML formatting.</p>"
+  }
+]
